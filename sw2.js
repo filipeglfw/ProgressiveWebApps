@@ -14,7 +14,7 @@ self.addEventListener('install', function(e) {
        '/',
        '/index.html',
        '/main.html',
-       '/styles/login.css
+       '/styles/login.css'
        '/styles/main.css'
      ]);
    })
