@@ -23,8 +23,14 @@
   <link rel="stylesheet" type="text/css" href="styles/inline.css">
 </head>
 <body>
-  <div id="go" style="background-color: red; width: 50px; height: 35px"></div>
+  <div id="go" style="background-color: red; width: 50px; height: 35px; margin-left: 50px"></div>
 
   <!-- Insert link to app.js here -->
+  <script>
+    document.getElementById("go").addEventHandler("click", go);
+    function go() {
+      alert("fui");
+    }
+  </script>
 </body>
 </html>
