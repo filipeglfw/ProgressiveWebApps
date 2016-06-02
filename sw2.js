@@ -6,3 +6,17 @@ self.addEventListener('fetch', function(event) {
    })
  );
 });
+
+self.addEventListener('install', function(e) {
+ e.waitUntil(
+   caches.open('glfw-pwa').then(function(cache) {
+     return cache.addAll([
+       '/',
+       '/index.html',
+       '/main.html',
+       '/styles/login.css
+       '/styles/main.css',
+     ]);
+   })
+ );
+});
