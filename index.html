@@ -36,6 +36,10 @@
     messagingSenderId: "24932430607"
   };
   firebase.initializeApp(config);
+  
+  // Retrieve Firebase Messaging object.
+const messaging = firebase.messaging();
+
 </script>
   <!-- Insert link to app.js here -->
     <script>
@@ -48,7 +52,15 @@ if('serviceWorker' in navigator) {
   <script>
     document.getElementById("go").addEventListener("click", go);
     function go() {
-      window.location = "main.html";
+      messaging.requestPermission()
+.then(function() {
+  console.log('Notification permission granted.');
+  messaging.getToken().then(function(token){console.log(token)});
+})
+.catch(function(err) {
+  console.log('Unable to get permission to notify.', err);
+});
+index.html
     }
   </script>
 </body>
