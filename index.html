@@ -25,6 +25,18 @@
 <body>
   <div id="go" style="background-color: red; width: 50px; height: 35px; margin-left: 50px"></div>
 
+<script src="https://www.gstatic.com/firebasejs/3.6.7/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAcidMHCO2quVoPP6dR4cjxzzMGkQWxPtA",
+    authDomain: "pushtestapp-d4017.firebaseapp.com",
+    databaseURL: "https://pushtestapp-d4017.firebaseio.com",
+    storageBucket: "pushtestapp-d4017.appspot.com",
+    messagingSenderId: "24932430607"
+  };
+  firebase.initializeApp(config);
+</script>
   <!-- Insert link to app.js here -->
     <script>
 if('serviceWorker' in navigator) {
